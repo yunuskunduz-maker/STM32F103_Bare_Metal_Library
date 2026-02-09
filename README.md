@@ -1,37 +1,49 @@
-# STM32 Bare-Metal Sürücü Kütüphanesi (20 Proje)
-
-Bu depo, STM32F103 (Cortex-M3) mikrodenetleyicisi üzerinde, herhangi bir hazır kütüphane (HAL, LL veya SPL) kullanılmadan, tamamen **Register (Kayıtçı)** seviyesinde geliştirilmiş 20 farklı sürücü projesini içermektedir.
-
-## 🚀 Proje Amacı ve Kapsamı
-Bu çalışma, gömülü sistemlerin kalbine inerek donanım birimlerinin (peripherals) nasıl çalıştığını derinlemesine anlamak ve yüksek performanslı, optimize edilmiş sürücüler geliştirmek amacıyla hazırlanmıştır. Projeler, savunma sanayii standartlarında kritik öneme sahip olan haberleşme protokollerini ve donanım mimarilerini kapsamaktadır.
-
-## 📁 Proje Listesi
-
-1.  **01_GPIO_Blink:** RCC ve GPIO register manipülasyonu ile temel LED kontrolü.
-2.  **02_UART_Hello_World:** USART2 birimi ile asenkron seri haberleşme başlangıcı.
-3.  **03_UART_Receiver:** Polling yöntemiyle dış dünyadan veri alımı.
-4.  **04_Timer_Basic_Delay:** Genel amaçlı Timer (TIM2) ile donanımsal gecikme oluşturma.
-5.  **05_ADC_Single_Channel:** 12-bit analog-dijital çevirici ile sensör verisi okuma.
-6.  **06_PWM_LED_Brightness:** Timer üzerinden PWM sinyali ile parlaklık kontrolü.
-7.  **07_I2C_Scanner_Master:** I2C protokolü ile veri yolu üzerindeki cihazların tespiti.
-8.  **08_SysTick_Delay:** ARM Cortex-M çekirdeğine gömülü zamanlayıcı ile profesyonel delay fonksiyonu.
-9.  **09_SPI_Master_Driver:** Yüksek hızlı SPI haberleşme mimarisi ve veri iletimi.
-10. **10_External_Interrupt_EXTI:** NVIC ve EXTI birimleri ile harici kesme yönetimi.
-11. **11_Watchdog_IWDG:** Sistem kilitlenmelerine karşı bağımsız bekçi zamanlayıcısı.
-12. **12_Internal_Flash_Write:** Enerji kesilse dahi verileri saklayan dahili flash bellek sürücüsü.
-13. **13_CRC_Calculation:** Veri paketlerinin doğrulanması için donanımsal hata kontrolü.
-14. **14_Power_Management:** Sleep Mode ve WFI komutu ile düşük güç tüketimi.
-15. **15_Real_Time_Clock_RTC:** LSE kristali ile saniye hassasiyetinde donanımsal saat takibi.
-16. **16_DMA_MemToMem:** İşlemciyi yormadan bellekler arası yüksek hızlı veri taşıma.
-17. **17_UART_DMA_Transmit:** DMA destekli, kesintisiz UART veri transferi.
-18. **18_Timer_Input_Capture:** Gelen sinyallerin frekans ve periyodunun ölçümü.
-19. **19_PWM_Input_Measurement:** Tek bir pin ile PWM sinyalinin (Duty & Freq) tam analizi.
-20. **20_CAN_Bus_Base_Driver:** Havacılık ve otomotiv standardı olan CAN protokolü sürücüsü.
-
-## 🛠️ Teknik Detaylar
-- **Donanım:** STM32F103RBT6 (Nucleo-F103RB)
-- **Geliştirme Ortamı:** STM32CubeIDE (Bare-Metal C)
-- **Mimari:** ARM Cortex-M3
+# STM32 Bare-Metal Driver Library (20 Projects) 🚀
 
 ---
-**Geliştiren:** [Yunus Kunduz]
+
+## 📋 Project Purpose and Scope
+**This repository contains 20 different driver projects developed entirely at the Register level for the STM32F103 (Cortex-M3) microcontroller, without using any high-level libraries (HAL, LL, or SPL).**
+
+**The primary objective of this study is to gain a deep understanding of how hardware peripherals operate and to develop high-performance, optimized drivers.** **The projects cover communication protocols and hardware architectures critical for defense industry standards.**
+
+
+
+---
+
+## 📁 Project List
+
+1.  **01_GPIO_Blink:** Basic LED control through RCC and GPIO register manipulation.
+2.  **02_UART_Hello_World:** Introduction to asynchronous serial communication using the USART2 peripheral.
+3.  **03_UART_Receiver:** Data reception from the external world using the polling method.
+4.  **04_Timer_Basic_Delay:** Creating hardware delays using the general-purpose Timer (TIM2).
+5.  **05_ADC_Single_Channel:** Reading sensor data using a 12-bit analog-to-digital converter.
+6.  **06_PWM_LED_Brightness:** Brightness control via PWM signals generated through a timer.
+7.  **07_I2C_Scanner_Master:** Detecting devices on the data bus using the I2C protocol.
+8.  **08_SysTick_Delay:** Professional delay function utilizing the timer embedded in the ARM Cortex-M core.
+9.  **09_SPI_Master_Driver:** High-speed SPI communication architecture and data transmission.
+10. **10_External_Interrupt_EXTI:** External interrupt management with NVIC and EXTI units.
+11. **11_Watchdog_IWDG:** Independent Watchdog Timer to protect against system hangs.
+12. **12_Internal_Flash_Write:** Internal flash memory driver for data persistence during power loss.
+13. **13_CRC_Calculation:** Hardware error checking for the verification of data packets.
+14. **14_Power_Management:** Low power consumption strategies using Sleep Mode and the WFI instruction.
+15. **15_Real_Time_Clock_RTC:** Hardware clock tracking with second-level precision using the LSE crystal.
+16. **16_DMA_MemToMem:** High-speed memory-to-memory data transfer without CPU overhead.
+17. **17_UART_DMA_Transmit:** Continuous UART data transfer supported by DMA.
+18. **18_Timer_Input_Capture:** Measuring the frequency and period of incoming signals.
+19. **19_PWM_Input_Measurement:** Full analysis of a PWM signal (Duty Cycle & Frequency) using a single pin.
+20. **20_CAN_Bus_Base_Driver:** Driver for the CAN protocol, an aerospace and automotive industry standard.
+
+
+
+---
+
+## 🛠️ Technical Details
+* **Hardware:** STM32F103RBT6 (Nucleo-F103RB)
+* **Development Environment:** STM32CubeIDE (Bare-Metal C)
+* **Architecture:** ARM® Cortex®-M3
+
+---
+
+**Developer:** Yunus Kunduz  
+**YouTube:** [CozumLab](https://www.youtube.com/@CozumLabTR)
